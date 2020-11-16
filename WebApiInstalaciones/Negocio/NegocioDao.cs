@@ -1012,7 +1012,7 @@ namespace Negocio
                     cmd.Parameters.Add("@comentarios_obsC", SqlDbType.VarChar).Value = p.comentarios_obsC;
                     cmd.Parameters.Add("@resFac_Factible", SqlDbType.Int).Value = p.resFac_Factible;
                     cmd.Parameters.Add("@id_resFac_ObsPrincipal", SqlDbType.Int).Value = p.id_resFac_ObsPrincipal;
-                    cmd.Parameters.Add("@Obs_generales", SqlDbType.Int).Value = p.Obs_generales;
+                    cmd.Parameters.Add("@Obs_generales", SqlDbType.VarChar).Value = p.Obs_generales;
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
@@ -1157,14 +1157,13 @@ namespace Negocio
                                 }
                             }
 
-
                             foreach (var f in p.photos)
                             {
                                 SqlCommand cmdF = cn.CreateCommand();
                                 cmdF.CommandTimeout = 0;
                                 cmdF.CommandType = CommandType.StoredProcedure;
                                 cmdF.CommandText = "Movil_SaveInspeccionesFoto";
-                                cmdF.Parameters.Add("@formatoId", SqlDbType.Int).Value = p.inspeccionCampoId;
+                                cmdF.Parameters.Add("@inspeccionCampoId", SqlDbType.Int).Value = p.inspeccionCampoId;
                                 cmdF.Parameters.Add("@fotoUrl ", SqlDbType.VarChar).Value = f.fotoUrl;
                                 cmdF.Parameters.Add("@estado ", SqlDbType.Int).Value = f.estado;
                                 cmdF.Parameters.Add("@usuarioId ", SqlDbType.Int).Value = f.usuarioId;
