@@ -1054,6 +1054,33 @@ namespace Negocio
                                 cmd1.Parameters.Add("@condAtrasTipo2", SqlDbType.Int).Value = c.condAtrasTipo2;
                                 cmd1.Parameters.Add("@condAtrasAltura2_BT", SqlDbType.Decimal).Value = c.condAtrasAltura2_BT;
                                 cmd1.Parameters.Add("@comentarioCableBT", SqlDbType.VarChar).Value = c.comentarioCableBT;
+								//------------------------------------------------------------
+								cmd1.Parameters.Add("@tipoCable1", SqlDbType.VarChar).Value = c.tipoCable1;
+								cmd1.Parameters.Add("@condIzqCant1", SqlDbType.Decimal).Value = c.condIzqCant1;
+								cmd1.Parameters.Add("@condIzqAltura1_Te", SqlDbType.Decimal).Value = c.condIzqAltura1_Te;
+								cmd1.Parameters.Add("@condIzqCant2", SqlDbType.Decimal).Value = c.condIzqCant2;
+								cmd1.Parameters.Add("@condIzqAltura2_Te", SqlDbType.Decimal).Value = c.condIzqAltura2_Te;
+								cmd1.Parameters.Add("@tipoCable2", SqlDbType.VarChar).Value = c.tipoCable2;
+								cmd1.Parameters.Add("@condDerCant1", SqlDbType.Decimal).Value = c.condDerCant1;
+								cmd1.Parameters.Add("@condDerAltura1_Te", SqlDbType.Decimal).Value = c.condDerAltura1_Te;
+								cmd1.Parameters.Add("@condDerCant2", SqlDbType.Decimal).Value = c.condDerCant2;
+								cmd1.Parameters.Add("@condDerAltura2_Te", SqlDbType.Decimal).Value = c.condDerAltura2_Te;
+								cmd1.Parameters.Add("@cableAdss", SqlDbType.Decimal).Value = c.cableAdss;
+								cmd1.Parameters.Add("@condAdeCant1", SqlDbType.Decimal).Value = c.condAdeCant1;
+								cmd1.Parameters.Add("@condAdeAltura1_Te", SqlDbType.Decimal).Value = c.condAdeAltura1_Te;
+								cmd1.Parameters.Add("@condAdeCant2", SqlDbType.Decimal).Value = c.condAdeCant2;
+								cmd1.Parameters.Add("@condAdeAltura2_Te", SqlDbType.Decimal).Value = c.condAdeAltura2_Te;
+								cmd1.Parameters.Add("@cableCoaxial", SqlDbType.VarChar).Value = c.cableCoaxial;
+								cmd1.Parameters.Add("@condAtrasCant1", SqlDbType.Decimal).Value = c.condAtrasCant1;
+								cmd1.Parameters.Add("@condAtrasAltura1_Te", SqlDbType.Decimal).Value = c.condAtrasAltura1_Te;
+								cmd1.Parameters.Add("@condAtrasCant2", SqlDbType.Decimal).Value = c.condAtrasCant2;
+								cmd1.Parameters.Add("@condAtrasAltura2_Te", SqlDbType.Decimal).Value = c.condAtrasAltura2_Te;
+								cmd1.Parameters.Add("@otrosCables", SqlDbType.VarChar).Value = c.otrosCables;
+								cmd1.Parameters.Add("@longCant1", SqlDbType.Decimal).Value = c.longCant1;
+								cmd1.Parameters.Add("@longAltura1_Te", SqlDbType.Decimal).Value = c.longAltura1_Te;
+								cmd1.Parameters.Add("@longCant2", SqlDbType.Decimal).Value = c.longCant2;
+								cmd1.Parameters.Add("@longAltura2_Te", SqlDbType.Decimal).Value = c.longAltura2_Te;
+								cmd1.Parameters.Add("@comentarioTele", SqlDbType.VarChar).Value = c.comentarioTele;									
                                 SqlDataReader dr1 = cmd1.ExecuteReader();
                                 if (dr1.HasRows)
                                 {
